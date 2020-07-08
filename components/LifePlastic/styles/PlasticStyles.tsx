@@ -26,7 +26,7 @@ export const TEXTOPACITY = "0.8";
 
 export const Diagram = styled.div({
   position: "absolute",
-  width: "100%",
+  width: "1050px",
   height: "4028px",
   margin: "0px auto",
 });
@@ -36,11 +36,11 @@ export const ToolTipContainer = styled.span({
 });
 
 export const FooterBackground = styled.div({
-  position: "absolute",
+  position: "relative",
   height: "1800px",
-  left: "-50%",
   width: "200%",
-  top: "4028px",
+  left: "-50%",
+  top: "3800px",
   background: "#424242",
 });
 export const Footer = styled.div({
@@ -330,16 +330,14 @@ export const TutorialDIV = styled.div({
 });
 
 export const GroundStyle = styled.div({
-  width: "200vw",
-  marginLeft: "-50vw",
+  width: "200%",
+  marginLeft: "-50%",
   height: "2248px",
   top: "-2248px",
   background: GROUNDBACKGROUND,
   position: "relative",
   zIndex: -2,
-  "@media only screen and (max-width: 600px)": {
-    width: "400vw",
-  },
+  "@media only screen and (max-width: 600px)": {},
 });
 
 export const SkyStyle = styled.div({
@@ -350,19 +348,15 @@ export const SkyStyle = styled.div({
   position: "relative",
   zIndex: -3,
   background: `${SKYBACKGROUND}`,
-  "@media only screen and (max-width: 600px)": {
-    width: "400vw",
-  },
+  "@media only screen and (max-width: 600px)": {},
 });
 export const RevealSkyStyle = styled.div({
-  width: "200vw",
-  marginLeft: "-50vw",
+  width: "200%",
+  marginLeft: "-50%",
   top: "-0",
   height: "4028px",
   position: "relative",
   background: `${SKYBACKGROUND}`,
   zIndex: 4,
-  "@media only screen and (max-width: 600px)": {
-    width: "400vw",
-  },
+  "@media only screen and (max-width: 600px)": {},
 });

@@ -43,7 +43,7 @@ const RevealBox: React.FC<RevealProps> = ({ onRemove, show, children }) => {
       initial="visible"
       variants={variants}
       style={{
-        width: "150vw",
+        width: "1050",
         height: "4000px",
         background: SKYBACKGROUND,
         position: "absolute",

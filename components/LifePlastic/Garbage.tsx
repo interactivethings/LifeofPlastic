@@ -5,7 +5,7 @@ export const GarbageBackground: React.FC = () => {
   return (
     <div
       style={{
-        width: "100vw",
+        width: "1050px",
         left: 0,
         height: "4028px",
         position: "absolute",

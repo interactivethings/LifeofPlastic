@@ -29,7 +29,6 @@ const RevealBox: React.FC<RevealProps> = ({ onRemove, show, children }) => {
   }, []);
 
   React.useEffect(() => {
-    console.log("back to into");
     if (show) {
       setReveal(true);
       if (onRemove) setTimeout(() => onRemove(), 3000);

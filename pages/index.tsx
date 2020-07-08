@@ -92,34 +92,12 @@ const Experiment013: React.FC = () => {
   const [tutorial, setTutorial] = React.useState<boolean>(true);
   const [triggerTutorial, setTriggerTutorial] = React.useState<boolean>(false);
   const [mode, setMode] = React.useState<boolean>(false);
-  const [logs, setLogs] = React.useState<Array<Logs>>([]);
 
   React.useEffect(() => {
-    console.log(garbagePile);
     if (garbagePile >= 2) {
-      console.log("Remove Tutorial");
       setTutorial(false);
     }
   }, [garbagePile]);
-
-  React.useEffect(() => {
-    if (logs.length > 10) {
-      console.log("OVER");
-      setLogs([...logs.slice(1)]);
-    }
-  }, [logs]);
-
-  const addLog = (parent: MaterialType, nextPath: PathType) => {
-    const newLog: Logs = {
-      id: nanoid(),
-      enterPlastic: parent.plastic,
-      enterAmount: 1,
-      facility: nextPath.name,
-      exitPlastic: nextPath.plastic,
-      exitAmount: 1,
-    };
-    setLogs([...logs, newLog]);
-  };
 
   const pathBuilder = (path: RouteType): Array<string> => {
     if (path.possible.length === path.probability.length) {
@@ -183,7 +161,6 @@ const Experiment013: React.FC = () => {
           },
         ]);
         const materials = modifiedMaterials.filter((i) => parent.id != i.id);
-        addLog(parent, nextPath);
         return { ...state, materials };
       });
     }
@@ -194,7 +171,6 @@ const Experiment013: React.FC = () => {
   ) => (parent: MaterialType) => {
     setGarbagePile(garbagePile + 1);
     setState((state) => {
-      console.log("removed");
       const materials = state.materials.filter((i) => parent.id != i.id);
       return { materials };
     });
@@ -238,10 +214,8 @@ const Experiment013: React.FC = () => {
       const verifiedId: keyof SystemList = id;
       const selectedSystem = systems[verifiedId];
       if (selectedSystem) {
-        console.log(`${verifiedId} turned OFF`);
         setSystems({ ...systems, [verifiedId]: false });
       } else {
-        console.log(`${verifiedId} turned ON`);
         setSystems({ ...systems, [verifiedId]: true });
       }
     } else {
@@ -544,7 +518,7 @@ const Experiment013: React.FC = () => {
         />
       </Diagram>
       <UIButtons
-        logs={logs}
+        logs={[]}
         systems={systems}
         addRecyclable={addRecyclable}
         resetState={() => {

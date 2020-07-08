@@ -4,7 +4,6 @@ import { SystemList, Logs } from "../Interfaces/Interfaces";
 import RecycleSymbol from "./RecycleSymbol";
 import InfoIcon from "./icons/info";
 import RefreshIcon from "./icons/refresh";
-import ShareIcon from "./icons/share";
 
 interface NavProps {
   systems: SystemList;
@@ -32,7 +31,6 @@ const UIButtons: React.FC<NavProps> = ({
   return (
     <div style={{ position: "relative", top: 1500 }}>
       <TopNavBar>
-        <ShareIcon onClick={() => console.log("Share Clicked!")} />
         <InfoIcon onClick={modeChange} />
         <RefreshIcon onClick={resetState} />
       </TopNavBar>

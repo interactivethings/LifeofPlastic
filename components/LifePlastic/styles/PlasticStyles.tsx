@@ -42,6 +42,10 @@ export const FooterBackground = styled.div({
   left: "-50%",
   top: "3800px",
   background: "#424242",
+  "@media only screen and (max-width: 1080px)": {
+    width: "1080px",
+    left: "0",
+  },
 });
 export const Footer = styled.div({
   position: "absolute",
@@ -49,7 +53,7 @@ export const Footer = styled.div({
   width: "1050px",
   top: "4028px",
   background: "#424242",
-  padding: "25px",
+  padding: "15px",
   "&>h2": {
     padding: "10px 0px",
     letterSpacing: "3px",
@@ -333,11 +337,14 @@ export const GroundStyle = styled.div({
   width: "200%",
   marginLeft: "-50%",
   height: "2248px",
-  top: "-2248px",
+  top: "1780px",
   background: GROUNDBACKGROUND,
-  position: "relative",
+  position: "absolute",
   zIndex: -2,
-  "@media only screen and (max-width: 600px)": {},
+  "@media only screen and (max-width: 1080px)": {
+    width: "1080px",
+    marginLeft: "0",
+  },
 });
 
 export const SkyStyle = styled.div({
@@ -345,18 +352,24 @@ export const SkyStyle = styled.div({
   marginLeft: "-50%",
   top: "0px",
   height: "4028px",
-  position: "relative",
+  position: "absolute",
   zIndex: -3,
   background: `${SKYBACKGROUND}`,
-  "@media only screen and (max-width: 600px)": {},
+  "@media only screen and (max-width: 1080px)": {
+    width: "1080px",
+    marginLeft: "0",
+  },
 });
 export const RevealSkyStyle = styled.div({
   width: "200%",
   marginLeft: "-50%",
   top: "-0",
   height: "4028px",
-  position: "relative",
+  position: "absolute",
   background: `${SKYBACKGROUND}`,
   zIndex: 4,
-  "@media only screen and (max-width: 600px)": {},
+  "@media only screen and (max-width: 1080px)": {
+    width: "1080px",
+    marginLeft: "0",
+  },
 });

@@ -7,7 +7,7 @@ const TutorialLines = () => {
       height="1781"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ position: "absolute", top: 0, zIndex: 7 }}
+      style={{ position: "absolute", top: 13, zIndex: 7 }}
     >
       <path
         d="M220.243 1618.55c2.28-4.14 8.233-4.14 10.513 0l16.264 29.56c2.2 4-.692 8.89-5.257 8.89h-32.527c-4.564 0-7.457-4.89-5.257-8.89l16.264-29.56z"

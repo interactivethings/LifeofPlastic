@@ -540,7 +540,7 @@ const Experiment013: React.FC = () => {
         </p>
         <h2>About the Project</h2>
         <p>
-          The project was created by{" "}
+          This project was created by{" "}
           <a target="_blank" href="https://www.lloydrichardsdesign.com">
             Lloyd Richards
           </a>{" "}
@@ -549,18 +549,18 @@ const Experiment013: React.FC = () => {
             Interactive Things
           </a>
           . Over the course six week, Lloyd explored, designed and developed a
-          visualization based on a topic of his choosiing. Hvaving a strong
+          visualization based on a topic of his choosiing. Having a strong
           passion for sustainability and systems, he chose to explore the
           complexities of the plastic recycling system.
         </p>
         <p>
           With so many visualization showing the simplicity of the system, Lloyd
-          chose to apporach it from the otherside and show how complex the
+          chose to approach it from a different perspective and show how complex the
           system is in reality. First outlining all the technological processes
           for recycling the major types of plastic and then researching how each
-          is interconnected. The flowdiagram was implimented into an interactive
-          webexperiance that allowed users to add plastic to the system and see
-          what routes it would take, like a giant pinball machine.
+          is interconnected. The flow diagram was implemented into an interactive
+          web experience allowing users to add plastic to the system and see
+          what routes it takes, similar to a giant pinball machine.
         </p>
         <p>
           The data visualization was created in TypeScript using React, Next.js,
